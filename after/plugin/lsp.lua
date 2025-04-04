@@ -22,8 +22,27 @@ lspconfig.pyright.setup({
 	end,
 })
 
--- JavaScript LSP setup
-lspconfig.tsserver.setup{}
+-- Typescript LSP setup
+lspconfig.ts_ls.setup{
+    capabilities = capabilities,
+}
+
+-- Svelte LSP setup
+lspconfig.svelte.setup{
+    capabilities = capabilities,
+}
+
+-- HTML LSP setup
+lspconfig.html.setup{
+    capabilities = capabilities,
+}
+
+-- CSS LSP setup
+lspconfig.cssls.setup{
+    capabilities = capabilities,
+}
+
+
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
